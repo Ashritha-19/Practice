@@ -54,6 +54,8 @@ public class Validation {
         }
         return inputStudent;
        }
+
+       
     public static void main(String[] args) {
 
 
@@ -69,14 +71,14 @@ public class Validation {
 
         Subject socialSubject = new Subject("social", 79, "pass");
 
-        Marks marks = new Marks("88","92","89","83",
-                "85","79");
-        marks.telugu = teluguSubject;
+        Marks marks = new Marks(teluguSubject,hindiSubject,englishSubject,
+                mathsSubject,scienceSubject,socialSubject);
+/*      marks.telugu = teluguSubject;
         marks.hindi = hindiSubject;
         marks.english = englishSubject;
         marks.maths = mathsSubject;
         marks.social = socialSubject;
-        marks.science = scienceSubject;
+        marks.science = scienceSubject;*/
 
         Student student = new Student("Krish","Amarnadh","01/01/2001",
                 "7672095126","Delhi Public School","06");
@@ -84,7 +86,7 @@ public class Validation {
 
         student.marks = marks;
 
-       student.name = "Krish";
+        student.name = "Krish";
         student.fatherName = "Amarnadh";
         student.mobileNumber = "7672095126";
         student.dob = "01-01-2001";
@@ -92,6 +94,5 @@ public class Validation {
         Validation validation = new Validation();
         Student latestStudent = validation.getResult(student);
         System.out.println(latestStudent);
-
     }
 }
